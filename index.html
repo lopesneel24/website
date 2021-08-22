@@ -36,14 +36,16 @@ text-align:center;
 }
 
 
-
-body {
+@media screen and (min-width: 650px) 
+{
+	body {
     background-image: url('https://i.pinimg.com/originals/5d/f6/c2/5df6c2a82066a17d2091a33cd62dd775.png');
     margin:0;
 	  font: 400 15px Lato, sans-serif;
     line-height: 1.8;
     color: #818181;
     }
+	}
 
   h2 {
     font-size: 24px;
@@ -432,7 +434,7 @@ function closeNav() {
 
 
 
-<canvas id="canvas" width="250" height="250" canvas align="right"  style="background-color:black">
+<canvas id="canvas" width="250" height="250" canvas align="center"  style="background-color:black">
 </canvas>
 
 <script>
