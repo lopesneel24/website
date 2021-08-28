@@ -12,31 +12,10 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+body {font-family:"lato";}
+* {box-sizing: border-box;}
 
-* {box-sizing: border-box;
-   $desktop:1200px;
-   $laptop:992px;
-   $tablet:768px;
-   $phone:480px;
-        }
-        
-.body{
-   {
-    @media( max-width:$laptop){
-           padding:15px;
-        margin:1px;
-       } 
-   
-        
-        @media (max-width:$tablet){
-        padding:15px;
-        margin:15px;
-       }
-        @media (max-width:$tablet){
-        padding:20px;
-        margin:1px;
-       }
-    }
+
 
    
     #header {
@@ -49,10 +28,17 @@
       position:unset;
       top:0;
       width: 100%;
-   
-      
- 
-       }
+      font-family:sans-serif;
+      transition: 0.2s;
+    
+    
+    
+    
+    
+    
+    
+    
+  }
     </style>
     </head>
     <body>
@@ -64,9 +50,10 @@
          <img src = "church.jpg" alt="St.Michaels church" imagealign="center" style="width:400px;  border: 6px solid black; background-color:Black;"> 
        </div>
     
-    <div  left = 0 style="margin-top:160px;font-family:sans-serif;text-align:center; padding:15px 15px 70px;font-size:30px;width:200%;background-color:grey">
+    <div style="margin-top:160px;font-family:sans-serif;
+    text-align:center; padding:15px 15px 70px;font-size:30px;width:100%;background-color:grey">
    
-   <p>TO DONATE CLICK THE BUTTON BELOW 👇</p>
+   <p>TO DONATE CLICK THE BUTTON BELOW 👇 </p>
    <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_Hpus9w7mZ88VCY" async> </script> </form>
       
     
@@ -77,33 +64,3 @@
     </body>
     </html>
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</html>
