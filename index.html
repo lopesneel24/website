@@ -12,10 +12,26 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-body {font-family:"lato";}
+
 * {box-sizing: border-box;}
-
-
+   $desktop:1200px;
+   $laptop:992px;
+   $tablet:768px;
+   $phone:480px;
+        
+.body{
+   {font-family:lato;
+    @media( max-width:$laptop){
+           padding:15px;
+        margin:1px;
+       } 
+   
+        
+        @media (max-width:$tablet){
+        padding:15px;
+        margin:15px;
+       }
+    
 
    
     #header {
@@ -30,7 +46,15 @@ body {font-family:"lato";}
       width: 100%;
       font-family:sans-serif;
       transition: 0.2s;
-    }
+         @media (max-width:$laptop){
+             font-size:15px;  
+             margin-bottom:0px;
+             text-align:center;
+             }
+        @media (max-width:$phone){
+             min-height:100px;
+             }
+       }
     </style>
     </head>
     <body>
@@ -45,7 +69,7 @@ body {font-family:"lato";}
     <div style="margin-top:160px;font-family:sans-serif;
     text-align:center; padding:15px 15px 70px;font-size:30px;width:100%;background-color:grey">
    
-   <p>TO DONATE CLICK THE BUTTON BELOW 👇 </p>
+   <p>TO DONATE CLICK THE BUTTON BELOW 👇</p>
    <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_Hpus9w7mZ88VCY" async> </script> </form>
       
     
