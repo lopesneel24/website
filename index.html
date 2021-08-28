@@ -20,7 +20,7 @@
    $phone:480px;
         
 .body{
-   {font-family:lato;
+   {
     @media( max-width:$laptop){
            padding:15px;
         margin:1px;
@@ -31,7 +31,11 @@
         padding:15px;
         margin:15px;
        }
-    
+        @media (max-width:$tablet){
+        padding:20px;
+        margin:1px;
+       }
+    }
 
    
     #header {
@@ -53,7 +57,9 @@
              }
         @media (max-width:$phone){
              min-height:100px;
-             }
+             image-align:center;
+            image-width:300px;
+        }
        }
     </style>
     </head>
