@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+
+body {
+
+      margin:0;
+	  font-family: sans-serif;
+   
+    }
+
+* {box-sizing: border-box;}
+
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1510px;
+  position: relative;
+  margin-left:15px;
+  top: -24px;
+  margin-right: 15px;
+}
+
+/* Next & previous buttons */
+  .prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: blue;
+}
+
+
+
+
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+ 	/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  background-color: goldenrod;
+  border-radius: 50%;
+  display:none;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: magenta;
+}
+
+
+
+
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name:fade;
+  -webkit-animation-duration: 0.5s;
+  animation-name: fade;
+  animation-duration: 20.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .8} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+
+
+
+
+.A {
+  top:100px;
+  width: 27px;
+  height: 3px;
+  background-color: violet;
+  margin: 5px 17px;
+  cursor:pointer;
+  display:none;
+ 
+}
+   
+   
+   /*For Top Bar*/
+
+.navbar {
+  width: 100%;
+  background-color:grey;
+  overflow: auto;
+ position:absolute;
+  left:0;
+  right:0;
+ top:0;
+}
+
+
+.navbar a {
+  float:right;
+  padding:  20px 17px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+ color:blue;
+}
+
+   
+
+    
+ .vl {
+  
+   border-left: 2px solid white;
+   height: 45px;
+   position:absolute;
+   left: 50%;
+   margin-left: 715px; 
+   top: 6px;
+ }
+
+  
+
+
+/*For navbar*/
+
+ul {
+  list-style-type: none;
+  margin-top: 40px;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  left:10px;
+  display:none;
+}
+
+li {
+  float: left;
+  left:10px;
+  margin-top: 25px;
+  margin-bottom:2px;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 24x 28px;
+  text-decoration: none;
+  font-size:14px;
+
+
+}
+
+li a:hover:not(.active) {
+  color:blue;
+}
+
+.active {
+  color:blueviolet;
+}
+
+.dropbtn {
+  background-color: #333;
+  color: white;
+  padding: 24px 28px;
+  font-size: 16px;
+  border: none;
+ 
+}
+
+
+
+
+.dropdown {
+  position: relative;
+   display:none;
+}
+
+.dropdown-content {
+  display:none;
+  position:fixed;
+  background-color:white;
+  width:200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index:1;
+  text-align:left;
+  margin-top:-5px;
+ 
+
+}
+
+
+
+.dropdown-content a {
+  color: black;
+  padding: 20px 50px;
+  text-decoration: none;
+  display:relative;
+  text-align:left;
+  font-size:19px;
+}
+
+.dropdown-content a:hover {background-color:violet;
+                            
+                                     }
+
+.dropdown:hover .dropdown-content {display:block;}
+
+.dropbtn:hover {color:blue;}
+
+/*For sidebar content */
+   
+   .dropbtnA {
+  background-color: #333;
+  color: white;
+  padding: 24px 24px;
+  font-size: 16px;
+  border: none;
+ 
+} 
+ 
+ .dropdownA {
+  position: relative;
+
+}
+
+.dropdown-contentA {
+  display:none;
+  position:fixed;
+  background-color:white;
+  width:200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index:1;
+  text-align:left;
+ 
+
+}
+
+
+
+.dropdown-contentA a {
+  color: black;
+  padding: 20px 50px;
+  text-decoration: none;
+  display:relative;
+  text-align:left;
+  font-size:19px;
+}
+
+.dropdown-contentA a:hover {background-color:violet;
+                            
+                                     }
+
+.dropdownA:hover .dropdown-contentA {display:block;}
+
+.dropbtnA:hover {color:blue;}
+
+
+
+
+
+
+
+
+/* For Sidebar */
+
+	.sidenav {
+  height: 100%;
+  width: 0px;
+  position: fixed;
+  z-index: 1;
+  top: 104px;
+  left: 0px;
+  background-color: #333;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 40px;
+  display:none;
+}
+
+.sidenav a {
+  padding: 10px 8px;
+  text-decoration: none;
+  font-size: 17px;
+  color: #333;
+  display: block;
+  transition: 0.3s;
+
+  text-align:left;
+
+}
+
+.sidenav a:hover {
+  color:blue;
+   padding: 10px 8px;
+   left:10px;
+}
+
+.sidenav .openbtn {
+  position: absolute;
+  top:5px;
+
+  font-size: 34px;
+  margin-left: 10px;
+  text-align:right;
+  padding:1px;
+  color:white;
+}
+
+ 
+
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  font-size: 36px;
+  margin-right: 15px;
+  text-align:right;
+  padding:1px;
+  color:white;
+}
+
+/* For Cards on lists items */
+
+
+
+
+
+@media (min-width:300px) and (max-width:555px)
+    {
+       .A{
+       display:block;
+       }
+     
+     .sidenav {
+       display:block;
+       }
+
+   ul {
+  list-style-type: none;
+  display:block;
+  margin-top: 30px;
+
+
+}
+
+li {
+
+  margin-top: 35px;
+  margin-bottom:10px;
+}
+
+.slideshow-container {
+  max-width: 450px;
+  position: relative;
+  margin-left:25px;
+  top:-34px;
+  margin-right: -5px;
+
+
+}
+   .img {
+     max-height:350px;
+     max-width:450px;
+   }
+
+   .vl {
+     
+     border-left: 2px solid white;
+     height: 45px;
+     position:inherit;
+     margin-left:200px;
+     top: 6px;
+   }
+      
+  
+   }
+      
+ 
+ @media (min-width:555px) and (max-width:1920px)     
+     {
+        .dropdown {
+             display:block 
+             }
+        
+        ul {
+  list-style-type: none;
+   display:block;
+  margin-top: 35px;
+
+
+}
+
+li {
+  float: left;
+  left:10px;
+  margin-top: 25px;
+  margin-bottom:4px;
+}
+
+
+
+
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+    <div class="vl"></div>
+  <a href="login.html" ><i  class="fa fa-fw fa-user"></i></a>
+   <a href ="#"><i class="fa fa-fw fa-shopping-bag"></i></a>
+  
+   <a href = "#"><i class="fa fa-heart-o"></i></a>
+</div>
+
+
+<ul>
+
+
+<li><span style="font-size:30px;cursor:pointer" onclick="openNav()">
+
+
+<div class ="A" style="bottom:10px; color:white;"></div>
+<div class ="A" style="bottom:10px;color:white;"></div>
+<div class ="A" style="bottom:10px;color:white;"></div>
+
+</span></li>
+
+
+ 
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+   <div class="dropdownA">
+  <button class="dropbtnA">WOMEN</button>
+  <div class="dropdown-contentA">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div>
+
+<div class="dropdownA">
+  <button class="dropbtnA">CHILDREN</button>
+  <div class="dropdown-contentA">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div>
+
+
+
+<div class="dropdownA">
+  <button class="dropbtnA">EVENTS & OCCASIONS</button>
+  <div class="dropdown-contentA">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+
+</a></li>
+
+<li><div class="dropdown">
+  <button class="dropbtn">WOMEN</button>
+  <div class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div>
+</li>
+
+<li><div class="dropdown">
+  <button class="dropbtn">CHILDREN</button>
+  <div class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div>
+</li>
+
+
+<li><div class="dropdown">
+  <button class="dropbtn">EVENTS & OCCASIONS</button>
+  <div class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div>
+</li>
+
+	</ul>
+
+<br><br>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  
+  <img src="Images\@1.jpg" class="img" style="width:100%;height:700px;" >
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+
+  <img src="Images\@2.jpg"   class="img" style="width:100%;height:700px;" >
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+
+  <img src="Images\@3.png"  class="img" style="width:100%;height:700px;">
+  <div class="text">Caption Three</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+
+
+
+
+
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var j;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (j = 0; j < slides.length; j++) {
+    slides[j].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (j = 0; j < dots.length; j++) {
+    dots[j].className = dots[j].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3000); // Change image every 4seconds
+}
+</script>
+
+</body>
+
+</html>
